@@ -1,3 +1,5 @@
+import 'firebase/firestore';
+
 export function seedDatabase(firebase) {
   function getUUID() {
     // eslint gets funny about bitwise
@@ -21,6 +23,7 @@ export function seedDatabase(firebase) {
     maturity: '18',
     slug: 'tiger-king',
   });
+  console.log('passed');
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Amanda Knox',
